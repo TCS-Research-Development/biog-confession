@@ -1,0 +1,37 @@
+<!-- <p>hiiii</p> -->
+<table border="1px" class="table">
+      <thead>
+        <tr>
+          <th>
+            Username
+          </th>
+          <th>File Path</th>
+           <th>Created Date</th>
+            <th>Download the file</a></th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr ng-repeat="user in username">
+          <td>
+           {{user.username}}
+          </td>
+          <td>
+               <div id="user-{{$index +1}}">
+           <p>{{user.box_file_path}}</p>
+            [{{$index}}] 
+         </div>
+          </td>
+          <td>
+           {{user.file_created_at}}
+          </td>
+   
+        <td>
+ <!--    <input type="submit" value="Download" ng-click="myFun()""> -->
+   <!--   <button id='ID{{$index}}' ng-click="myFunc()">Download</button> -->
+   <div id="user-{{$index +1}}">
+   <button id="0" ng-click="myFunc(user.id)">Download</button> 
+    [{{$index}}] 
+ </div>
+  </td>
+       </tbody>
+    </table>

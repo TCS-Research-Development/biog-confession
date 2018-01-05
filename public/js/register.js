@@ -14,12 +14,12 @@ app.config(function($routeProvider) {
         templateUrl : "public/views/register.html",
         controller:"signup"
     })
-    // .when("/target", {
-    //     templateUrl : "public/views/adminhome.html",
+    // .when("/adminhome", {
+    //     templateUrl : "public/views/sample.html",
     // })
     .when("/userhome", {
         templateUrl : "public/views/file-upload.html",
-        // controller:"upload"
+        controller:"uploadctrl"
     })
     .when("/adminhome",{
         templateUrl:"public/views/target.html",
@@ -33,6 +33,12 @@ app.controller('homectrl', function($scope,$location){
     $location.path("/login");
   };
 });
+// app.controller('uploadctrl', function($scope,$location){
+//   $scope.goto = function(path){
+//     $location.path("/login");
+//   };
+// });
+
 
 app.controller('regCtrl', function($scope,$http,$location){
 
@@ -131,6 +137,7 @@ app.controller('showctrl', function($scope,$http,$location){
        // $scope.username=response.data.Data[0].username;
         console.log(response.data.Data);
         $scope.username=response.data.Data;
+        // alert('File uploaded successfully');
         // $scope.box_file_path=response.data.Data[0].box_file_path;
         // $scope.file_created_at=results.dat.Data[0].file_created_at;
         // $scope.username=response.data.Data[1].username;
@@ -143,49 +150,52 @@ app.controller('showctrl', function($scope,$http,$location){
         console.log(response.status);
         console.log(response.statusText);
 });   
-});
+// });
 
 
    
-//       $scope.myFunc = function(event) {
-// //var message = $scope.username;
-//      var userId=[0,1,2,3,4,5,6,7,8,9];
-// console.log(userId);
-// // /
+      $scope.myFunc = function(event) {
+//var message = $scope.username;
+     var userId=[0,1,2,3,4,5,6,7,8,9];
+console.log(userId);
+// /
 
-// var array=$scope.username.map(function (username) {
-//   return username.box_file_path;
-// });
-// console.log(array);
+var array=$scope.username.map(function (username) {
+  return username.box_file_path;
+});
+console.log(array);
 
-// for(i=0;i<=20;i++)
-// {
-//     if(userId.indexOf[i]==array.indexOf[i])
-//     {
-//         console.log('hello Divya Pothu');
-//         console.log(i);
-//          console.log(array[i]);
-//         var fdata=array[i];
-//         var cdata='['+fdata+']';
-//         console.log('json arranged data'+cdata);
+for(i=0;i<=20;i++)
+{
+    if(userId.indexOf[i]==array.indexOf[i])
+    {
+        console.log('hello Divya Pothu');
+        console.log(i);
+         console.log(array[i]);
+        var fdata=array[i];
+        var cdata='['+fdata+']';
+        console.log('json arranged data'+cdata);
         
-//   //     }
-//   // }
-//            $http({
-//     method: 'POST',
-//     url: 'http://localhost:8000/download',
-//     // data:array,
-//     data:cdata,
-//     headers:{'Content-Type': 'application/json'},
-//   }).then(function successCallback(response) {
-//         console.log("Entered in successCallback ");
-//         console.log('how are you');
+  //     }
+  // }
+           $http({
+    method: 'POST',
+    url: 'http://localhost:8000/download',
+    // data:array,
+    data:cdata,
+    headers:{'Content-Type': 'application/json'},
+  }).then(function successCallback(response) {
+        console.log("Entered in successCallback ");
+        console.log('how are you');
 
        
 
-// });
-// }
-// }
+});
+}
+}
+}
+
+});
 
     
 

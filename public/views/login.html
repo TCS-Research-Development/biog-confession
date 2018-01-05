@@ -17,16 +17,19 @@
   </div>
 
   <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" ng-model="userName" name="uname">
-
+    <label><b>Username</b></label> <input type="text" placeholder="Enter Username" ng-model="userName" name="uname">
+<br>
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" ng-model="pwd" name="psw">
-        
+    <br>
+    <div class ="log">
+      <input type="checkbox" checked="checked"> Remember me<br>
     <button type="submit" ng-click = loginUser()>Login</button>
     <button type="submit" ng-click = signUp()>Register</button>
-    <input type="checkbox" checked="checked"> Remember me
+    
+    
   </div>
+</div>
 
   <!-- <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>

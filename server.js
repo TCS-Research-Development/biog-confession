@@ -24,7 +24,7 @@ app.use(cookieParser());
 var express = require('express');
 var router = express.Router();
 
-var sequelize = new Sequelize('postgres', 'postgres', 'Satya@9036', {
+var sequelize = new Sequelize('postgres', 'postgres', 'Divya123', {
     host: 'localhost',
     port: 5432,
     dialect: 'postgres',
@@ -44,7 +44,7 @@ var sdk = new BoxSDK({
 });
  
 //Create a basic API client
-var client = sdk.getBasicClient('bf9RVT4OVq86Emv1k4gCo9Ttxyk0HjaD');
+var client = sdk.getBasicClient('fKxQPGxsIZGoIeOvFxDBuYnLp2Nm5n1L');
  
 // Get some of that sweet, sweet data!
 client.users.get(client.CURRENT_USER_ID, null, function(err, currentUser) {

@@ -13,7 +13,7 @@ input[type=text], input[type=password] {
 
 button {
 /*    background-color: #4CAF50;*/
-background-color: #4c70af;
+background-color: #4c6eaf;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -29,7 +29,7 @@ button:hover {
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #4c6eaf;
 }
 
 .imgcontainer {
@@ -64,7 +64,7 @@ span.psw {
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -74,22 +74,25 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-/*    background-color: #4CAF50;*/
-background-color: #4c70af;
+    background-color: #4c6eaf;
+/*background-color: #4c70af;*/
     color: white;
-    padding: 14px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
 
 
+}
+.log{
+    margin-left: 70px;
 }
 
 /* Extra styles for the cancel button */
 .cancelbtn {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color: #4c96af;
 }
 
 /* Float cancel and signup buttons and add an equal width */
@@ -116,4 +119,69 @@ background-color: #4c70af;
     .cancelbtn, .signupbtn {
        width: 100%;
     }
+}
+<style>
+body {
+    
+}
+h1{
+
+    text-align: center;
+    color:white;
+
+}
+a {
+    font-size: 30px;
+    color:#4c96af;
+    
+    }
+    div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+/*header {
+    padding: 0.6em;
+    color: white;
+    background-color:darkblue;
+    clear: left;
+    text-align: center;
+
+}*/
+/**/
+header {
+  padding: 8px 14px;
+  background: #4c6eaf;
+  color: darkblue;
+  top:0;
+   width: 100%;
+     
+     z-index: 1;
+
+}
+
+
+/*footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color:darkblue;
+    text-align: center;
+    color: white;
+  }
+   */
+   .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #4c6eaf;
+   color: white;
+   text-align: center;
+}
+
+table{
+    width:100%;
 }
